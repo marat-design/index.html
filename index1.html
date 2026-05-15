@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дамир & Ленора | Үйлену тойы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #b8860b; 
+            --soft-gold: #d4af37;
+            --ivory: #fdfaf1; 
+            --dark: #2c2c2c;
+        }
+        * { box-sizing: border-box; }
+        
+        body { 
+            margin: 0; font-family: 'Cormorant Garamond', serif; 
+            background-color: var(--ivory); color: var(--dark); 
+            overflow-x: hidden; scroll-behavior: smooth;
+        }
+
+        /* АНИМАЦИЯ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section { padding: 60px 20px; text-align: center; max-width: 800px; margin: 0 auto; position: relative; }
+
+        .ornament-box {
+            display: block; width: 100px; height: auto; margin: 0 auto 20px;
+            fill: var(--soft-gold);
+        }
+
+        /* МҰҚАБА (HERO) */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070') center/cover;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: white; text-align: center; border-bottom: 4px solid var(--soft-gold);
+        }
+        .hero h1 { font-family: 'Great Vibes', cursive; font-size: 4.5rem; margin: 10px 0; color: #fff; }
+
+        .info-card {
+            background: #fff; border: 1px solid #e8e0cc; padding: 40px 25px; 
+            box-shadow: 0 10px 30px rgba(184, 134, 11, 0.1); border-radius: 10px;
+            position: relative; margin-bottom: 20px;
+        }
+
+        /* ТАЙМЕР */
+        .timer-wrap { display: flex; justify-content: center; gap: 10px; margin-top: 25px; }
+        .timer-unit { 
+            background: var(--ivory); border: 1px solid var(--soft-gold); 
+            width: 70px; height: 70px; border-radius: 8px; 
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .timer-unit b { font-size: 1.4rem; color: var(--gold); font-family: 'Montserrat', sans-serif; }
+        .timer-unit span { font-size: 0.6rem; text-transform: uppercase; color: #777; }
+
+        /* КАРТА СТИЛІ */
+        .map-container {
+            width: 100%; height: 350px; border-radius: 15px; overflow: hidden;
+            border: 4px solid #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .btn {
+            background: var(--gold); color: white; border: none; padding: 16px; 
+            width: 100%; cursor: pointer; font-family: 'Montserrat', sans-serif; 
+            font-weight: bold; letter-spacing: 2px; border-radius: 5px; transition: 0.3s;
+        }
+        .btn:hover { background: var(--dark); }
+
+        input, select { 
+            width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #dcd3bc; 
+            border-radius: 5px; background: #fff; font-family: 'Montserrat', sans-serif;
+        }
+
+        footer { padding: 40px; color: var(--soft-gold); font-size: 0.8rem; letter-spacing: 2px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="reveal active">
+            <p style="letter-spacing: 5px; text-transform: uppercase; font-size: 0.9rem;">Тойға шақыру</p>
+            <h1>Дамир & Ленора</h1>
+            <p style="font-size: 1.5rem; font-weight: 300;">19.06.2026</p>
+        </div>
+    </div>
+
+    <section class="reveal">
+        <svg class="ornament-box" viewBox="0 0 100 50">
+            <path d="M10,25 Q25,0 50,25 T90,25 M10,25 Q25,50 50,25 T90,25" fill="none" stroke="#b8860b" stroke-width="2"/>
+            <circle cx="50" cy="25" r="5" fill="#b8860b"/>
+        </svg>
+        <h2>Құрметті қонақтар!</h2>
+        <div class="info-card">
+            <p style="font-size: 1.5rem; line-height: 1.8; font-style: italic; color: #444;">
+                Ақ тілекпен сіздерді ұлымыз <b>Дамир</b> мен келініміз <b>Ленораның</b> үйлену тойына арналған салтанатты ақ дастарханымызға шақырамыз!
+            </p>
+        </div>
+    </section>
+
+    <section class="reveal" style="background-color: #f9f5eb;">
+        <h2>Той салтанаты</h2>
+        <div class="info-card">
+            <p style="font-weight: 700; font-size: 1.5rem; color: var(--gold);">19 Маусым 2026</p>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">Сәрсенбі, сағат 18:00</p>
+            <div style="height: 1px; width: 60px; background: var(--soft-gold); margin: 15px auto;"></div>
+            <p style="font-size: 1.4rem; font-weight: 600;">«Алтын холл» рестораны</p>
+            <p style="color: #666;">Құлжа тас жолы, Бәйтерек (Новоалексеевка), 133</p>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46532.551351187445!2d77.2185202!3d43.3551523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836ba8c91979ad%3A0xc3b8b9a19c5b207d!2z0JHQsNC50YLQtdGA0LXQuSwg0LDQuy3Qp9Cw0YDQsNCx0LDRgdC60LDRjyDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1skk!2skz!4v1710000000000!5m2!1skk!2skz" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: var(--gold);">Тойға дейін қалды:</p>
+            <div class="timer-wrap">
+                <div class="timer-unit"><b id="days">00</b><span>күн</span></div>
+                <div class="timer-unit"><b id="hours">00</b><span>сағ</span></div>
+                <div class="timer-unit"><b id="minutes">00</b><span>мин</span></div>
+                <div class="timer-unit"><b id="seconds">00</b><span>сек</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; color: #888;">Ақ тілекпен шақырушылар:</p>
+        <h3 style="font-size: 2.8rem; font-family: 'Great Vibes', cursive; margin: 10px 0;">Ерболат — Назгүл</h3>
+        <p style="font-family: 'Montserrat', sans-serif; letter-spacing: 2px; color: var(--gold);">ТҮГІС ҚОСАЙ</p>
+        <svg class="ornament-box" viewBox="0 0 100 50" style="transform: rotate(180deg); margin-top: 20px;">
+            <path d="M10,25 Q25,0 50,25 T90,25 M10,25 Q25,50 50,25 T90,25" fill="none" stroke="#b8860b" stroke-width="2"/>
+            <circle cx="50" cy="25" r="5" fill="#b8860b"/>
+        </svg>
+    </section>
+
+    <section class="reveal">
+        <h2>Жауап беру</h2>
+        <div style="max-width: 400px; margin: 0 auto;">
+            <input type="text" id="guestName" placeholder="Аты-жөніңіз">
+            <select id="status">
+                <option value="Келемін">Келемін</option>
+                <option value="Жұбайыммен келемін">Жұбайыммен келемін</option>
+                <option value="Келе алмаймын">Келе алмаймын</option>
+            </select>
+            <button class="btn" onclick="sendWA()">ЖІБЕРУ</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>СІЗДЕРДІ АСЫҒА КҮТЕМІЗ!</p>
+    </footer>
+
+    <script>
+        // Reveal
+        function reveal() {
+            var revs = document.querySelectorAll(".reveal");
+            for(var i=0; i<revs.length; i++) {
+                var wh = window.innerHeight;
+                var top = revs[i].getBoundingClientRect().top;
+                if(top < wh - 100) revs[i].classList.add("active");
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.onload = reveal;
+
+        // Timer
+        const target = new Date("June 19, 2026 18:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = target - now;
+            if(diff > 0) {
+                document.getElementById("days").innerText = Math.floor(diff / (1000*60*60*24));
+                document.getElementById("hours").innerText = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+                document.getElementById("minutes").innerText = Math.floor((diff % (1000*60*60)) / (1000*60));
+                document.getElementById("seconds").innerText = Math.floor((diff % (1000*60)) / 1000);
+            }
+        }, 1000);
+
+        // WA Send (+7 707 394 1943)
+        function sendWA() {
+            const n = document.getElementById('guestName').value;
+            const s = document.getElementById('status').value;
+            if(!n) return alert("Атыңызды жазыңыз");
+            window.open(`https://wa.me/77073941943?text=Дамир-Ленора тойына жауап: ${n} - ${s}`, '_blank');
+        }
+    </script>
+</body>
+</html>
